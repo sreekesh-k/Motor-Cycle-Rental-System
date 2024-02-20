@@ -1,0 +1,273 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fb;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: #fff;
+}
+
+.logo-sign {
+    width: 300px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 80px;
+    width: 100px;
+    background: url('images/logos/logo4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.sign {
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    height: 600px;
+    background-image: url('images/black_and_white2.jpg');
+    /* Path to your hero image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+.hero h1 {
+    margin-top: 200px;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.locations {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.locations h5 {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    font-size: 40px;
+    font-weight: 400px;
+    padding-top: 70px;
+}
+
+.locations h5::before {
+    left: 50px;
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 10%;
+    height: 1px;
+    background-color: maroon;
+    left: 680px;
+}
+
+.locations h5::after {
+    margin-bottom: 5px;
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    width: 20%;
+    height: 2px;
+    background-color: maroon;
+    right: 610px;
+}
+
+.location {
+    background-color: #fff;
+    height: 300px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+
+}
+
+.loc {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid maroon;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    /* color: white;
+    background-image: linear-gradient(to bottom, #ff6600, rgba(0, 0, 0, 0.178)); */
+    justify-content: center;
+    text-align: center;
+}
+
+.loc:hover {
+    box-shadow: 0px 0px 30px maroon;
+    font-size: x-large;
+}
+
+.loc-add {
+    width: 80%;
+    font-size: large;
+}
+
+.fleet {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f7f9fb;
+    margin: 10px;
+}
+
+.fleet h5 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 400px;
+    margin-bottom: 30px;
+}
+
+.fleet h5::before {
+    left: 50px;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 8%;
+    height: 1.5px;
+    background-color: maroon;
+    left: 677px;
+}
+
+.fleet h5::after {
+    margin-bottom: 5px;
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 13.5%;
+    height: 1.5px;
+    background-color: maroon;
+    right: 637px;
+}
+
+.fleet-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    width: 90%;
+}
+
+.fleet-image {
+    background-color: #fff;
+    height: 290px;
+    width: 280px;
+    box-shadow: 5px 5px 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.fleet-image img {
+    width: 90%;
+    /* Adjust the width as needed */
+    height: 66%;
+}
+
+.fleet-image a {
+    text-decoration: none;
+    color: white;
+}
+
+.description {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.book-now {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ff6600;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.book-now a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
