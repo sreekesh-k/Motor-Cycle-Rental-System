@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.bike {
+    width: 100%;
+    height: 500px;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+}
+.bike-header {
+    height: 80px;
+}
+.bike-header h4 {
+    padding-top: 20px;
+    font-size: 35px;
+    font-weight: 400px;
+    
+}
+
+.bike-box {
+    width: 70%;
+    height: 350px;
+    background-color: #ff6600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 2px;
+    box-shadow: 5px 5px 10px;
+}
+
+.bike-box:hover {
+    box-shadow: 10px 10px 20px #ff6600;
+    transform : translate(5px , 5px); 
+}
+
+.bike-image {
+    height: 90%;
+    width:50%;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+.bike-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    margin-right : 25px;
+}
+
+.bike-details {
+    height : 90%;
+    width:48%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.bike-details ul {
+    list-style-type: none;
+    margin-left:  20px;
+    
+}
+
+.bike-details ul li{
+    margin-top: 30px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.book-now {
+    width: 100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: maroon;
+}
+
+.book-container {
+    position:relative;
+    width: 50%;
+    height: 330px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.pickup-box {
+    padding: 35px;
+    width:100%;
+    height:20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input {
+    width: 100%;
+    height: 50px; /* Adjust the height as needed */
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 15px ;
+    border: 2px solid grey;
+}
+
+.input::placeholder {
+    color: #ffffff66;
+}
+
+.input i {
+    position: absolute;
+    right: 20px;
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.dropoff-box {
+    padding: 35px;
+    width:100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn {
+    background-color: #ff6600;
+    margin-left: 150px;
+    margin-right:35px;
+    margin-top: 30px;
+    height: 50px;
+    width: 60%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+}
+.btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+

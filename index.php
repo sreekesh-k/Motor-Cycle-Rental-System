@@ -11,41 +11,18 @@ session_start();
     <link rel="stylesheet" href="style/Homepage.css"> <!-- Link to your CSS file -->
 </head>
 
-<body>
-    <header>
-        <div class="logo-sign">
-            <div class="logo"></div>
-            <div class="sign">MotorBeam</div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#fleet">Fleet</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <?php
-                if (isset($_SESSION['username'])) {
-                    $username = $_SESSION['username'];
-                    echo
-                    "
-                    <li>$username</li>
-                     <li><a href='logout.php'>Logout</a></li>
-                    ";
-                } else {
-                    echo "
-                    <li><a href='Signup.php'>Signup</a></li> 
-                    <li><a href='login.php'>Login</a></li>
-                    ";
-                    
-                }
-                ?>
-            </ul>
-        </nav>
-    </header>
+<?php  include('Header.php'); ?> 
 
     <section class="hero">
         <h1>Welcome to MotorBeam Motorcycle Rental</h1>
         <p>Explore our wide range of motorcycles for rent.</p>
         <a href="#fleet" class="btn">Book Now</a>
     </section>
+
+    <div class = about-us>
+        <div class = about-header><h4>WELCOME TO MOTORBEAM</h4> </div>
+        <div class = about-content>MotorBeam is a high-end luxury motorcycle rental company based in Kochi, Kerala.<br> Our mission is to provide an unparalleled experience to motorcycle enthusiasts who seek the thrill of riding <br>premium motorcycles without the hassle of ownership. We offer a wide range of top-of-the-line motorcycles, meticulously maintained and serviced to ensure a smooth and safe ride.</div>
+    </div>
 
     <div class="locations">
         <h5>OUR LOCATIONS</h5>
@@ -66,7 +43,9 @@ session_start();
     </div>
 
     <div id="fleet" class="fleet">
-        <h5>OUR FLEET</h5>
+        <div class= "fleet-h">
+            <div class="fleet-header"><h5>OUR FLEET</h5></div>
+        </div>
         <div class="fleet-images">
             <?php
             $sql = "SELECT * FROM bike";
@@ -77,7 +56,7 @@ session_start();
                     "<div class='fleet-image'>
                         <img src='{$row["img_url"]}' alt='{$row["bike_name"]}'>
                         <div class='description'>{$row["bike_name"]}</div>
-                        <a href='bikedetails.php?bike_id={$row["bike_id"]}'><div class='book-now'>Book Now</div></a>
+                        <a href='Booking.php?bike_name={$row["bike_name"]}&img_url={$row["img_url"]}'><div class='book-now'>Book Now</div></a>
                     </div>
                     ";
                 }
@@ -86,18 +65,7 @@ session_start();
         </div>
     </div>
 
-    <footer id="contact" class="footer">
-        <div class="contact-info">
-            <p>Contact us:</p>
-            <p>Phone: 123-456-7890</p>
-            <p>Email: info@motorcyclerental.com</p>
-        </div>
-        <div class="social-icons">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-        </div>
-    </footer>
+   <?php include('Footer.php');?>
 </body>
 
 </html>
