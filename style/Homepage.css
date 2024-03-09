@@ -146,11 +146,13 @@ nav ul li a {
     background-color: #fff;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 5px 5px 10px;
+    box-shadow: 10px 10px 10px #ff6600;
+    border : 1px solid #ff6600;
+    font-weight: bold;
+    font-style: italic;
 }
 .about-content:hover {
-    box-shadow: 5px 5px 20px #ff6600;
-
+    transform : scale(1.05);
 }
 
 .locations {
@@ -217,11 +219,14 @@ nav ul li a {
     background-image: linear-gradient(to bottom, #ff6600, rgba(0, 0, 0, 0.178)); */
     justify-content: center;
     text-align: center;
-    box-shadow: 5px 5px 10px;
+    box-shadow: 10px 10px 10px #ff6600;
+    border : 1px solid #ff6600;
+
+
 }
 
 .loc:hover {
-    box-shadow: 5px 5px 10px #ff6600;
+    transform: scale(1.05);
 }
 
 .loc-add {
@@ -296,7 +301,7 @@ nav ul li a {
 }
 .fleet-image:hover {
     transform: scale(1.1);
-    transform: translate(5px,5px);
+
     cursor: pointer;
 }
 

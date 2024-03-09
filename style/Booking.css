@@ -82,17 +82,26 @@ body {
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: maroon;
 }
 
 .book-container {
     position:relative;
     width: 50%;
     height: 330px;
-    background-color: #f9f9f9;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 15px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid  black;
+    border-radius: 25px;
+}
+
+form {
+    height: 100%;
+    width : 100%;
+    
 }
 
 .pickup-box {

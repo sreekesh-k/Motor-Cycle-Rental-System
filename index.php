@@ -21,7 +21,7 @@ session_start();
 
     <div class = about-us>
         <div class = about-header><h4>WELCOME TO MOTORBEAM</h4> </div>
-        <div class = about-content>MotorBeam is a high-end luxury motorcycle rental company based in Kochi, Kerala.<br> Our mission is to provide an unparalleled experience to motorcycle enthusiasts who seek the thrill of riding <br>premium motorcycles without the hassle of ownership. We offer a wide range of top-of-the-line motorcycles, meticulously maintained and serviced to ensure a smooth and safe ride.</div>
+        <div class = about-content>" MotorBeam is a high-end luxury motorcycle rental company based in Kochi, Kerala.<br> Our mission is to provide an unparalleled experience to motorcycle enthusiasts who seek the thrill of riding <br>premium motorcycles without the hassle of ownership. We offer a wide range of top-of-the-line motorcycles, meticulously maintained and serviced to ensure a smooth and safe ride. "</div>
     </div>
 
     <div class="locations">
