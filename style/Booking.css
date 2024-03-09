@@ -38,11 +38,6 @@ body {
     box-shadow: 5px 5px 10px;
 }
 
-.bike-box:hover {
-    box-shadow: 10px 10px 20px #ff6600;
-    transform : translate(5px , 5px); 
-}
-
 .bike-image {
     height: 90%;
     width:50%;

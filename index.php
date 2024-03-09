@@ -56,7 +56,7 @@ session_start();
                     "<div class='fleet-image'>
                         <img src='{$row["img_url"]}' alt='{$row["bike_name"]}'>
                         <div class='description'>{$row["bike_name"]}</div>
-                        <a href='Booking.php?bike_name={$row["bike_name"]}&img_url={$row["img_url"]}'><div class='book-now'>Book Now</div></a>
+                        <a href='Booking.php?bikeid={$row["bike_id"]}'><div class='book-now'>Book Now</div></a>
                     </div>
                     ";
                 }

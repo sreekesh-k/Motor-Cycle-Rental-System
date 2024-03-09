@@ -7,23 +7,22 @@ if (isset($_SESSION['username'])) {
     $username = '';
 }
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $bike_name = $_GET["bike_name"];
-    $img_url = $_GET["img_url"];
-
-    $sql = "SELECT * FROM bike WHERE bike_name='{$bike_name}'";
+    $bike_id = $_GET["bikeid"];
+    $sql = "SELECT * FROM bike WHERE bike_id='{$bike_id}'";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $model = $row["model_year"];
             $cc = $row["engine_cc"];
             $bhp =  $row["bhp"];
+            $img_url = $row["img_url"];
             $torque = $row["torque"];
             $transmission = $row["transmission"];
             $cost = $row["perhour_cost"];
-            $bikeid = $row["bike_id"];
+            $bike_name = $row["bike_name"];
         }
     }
-    $_SESSION["bikeid"] = $bikeid;
+    $_SESSION["bikeid"] = $bike_id;
 }
 ?>
 
@@ -86,12 +85,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <div class="input"><input type="date" name="dropoff-date" id="dropoffdate" placeholder="Date"></div>
                     <div class="input"><input type="time" name="dropoff-time" id="dropofftime" placeholder="Time"></div>
                 </div>
-                <div class="btn"><input type="submit" name="submit" id="btn">BOOK NOW</div>
+                <input class="btn" type="submit" name="submit" id="btn" value="BOOK NOW">
             </form>
         </div>
     </div>
 
-    
+
 
 
     <?php include('Footer.php'); ?>
