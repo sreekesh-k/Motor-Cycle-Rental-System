@@ -74,16 +74,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <h2>Pickup :</h2>
                 </label>
                 <div class="pickup-box">
-
-                    <div class="input"><input type="date" name="pickup-date" id="pickupdate" placeholder="Date" required></div>
-                    <div class="input"><input type="time" name="pickup-time" id="pickuptime" placeholder="Time" required></div>
+                    <input class="input" type="date" name="pickup-date" id="pickupdate" placeholder="Date" required>
+                    <input class="input" type="time" name="pickup-time" id="pickuptime" placeholder="Time" required>
                 </div>
                 <label>
                     <h2>Dropoff :</h2>
                 </label>
                 <div class="dropoff-box">
-                    <div class="input"><input type="date" name="dropoff-date" id="dropoffdate" placeholder="Date" required></div>
-                    <div class="input"><input type="time" name="dropoff-time" id="dropofftime" placeholder="Time" required></div>
+                    <input class="input" type="date" name="dropoff-date" id="dropoffdate" placeholder="Date" required>
+                    <input class="input" type="time" name="dropoff-time" id="dropofftime" placeholder="Time" required>
                 </div>
                 <input class="btn" type="submit" name="submit" id="btn" value="BOOK NOW">
             </form>
