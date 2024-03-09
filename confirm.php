@@ -57,7 +57,7 @@ if (isset($_SESSION['bikeid'])) {
             {
                 // Combine pickup and dropoff dates and times into DateTime objects
                 $pickupDatetime = new DateTime("$pdate $ptime");
-                $dropoffDatetime = new DateTime("$ddate $dtime");            
+                $dropoffDatetime = new DateTime("$ddate $dtime");
 
                 // Calculate the difference between the two timestamps
                 $interval = $pickupDatetime->diff($dropoffDatetime);
@@ -72,29 +72,39 @@ if (isset($_SESSION['bikeid'])) {
                 return $totalHours;
             }
 
-            function totalamount($perhrcost , $totalHours) {
+            function totalamount($perhrcost, $totalHours)
+            {
                 $totalAmt = $perhrcost * $totalHours;
                 return $totalAmt;
             }
 
             // Example usage (assuming separate variables retrieved from the table)
             $totalHours = calculateHours($pdate, $ptime, $ddate, $dtime);
-            $totalAmt = totalamount($perhrcost , $totalHours);
+            $totalAmt = totalamount($perhrcost, $totalHours);
 
             echo "<h4>Total Booking Duration: </h4>" . $totalHours . "<h4> hours </h4>";
             echo "<h4>Total Amount: </h4>" . $totalAmt . "<h4> Rs </h4>";
             ?>
         </div>
-        <div class="btn"><input type="button" name="YES" id="btn">YES</div>
-        <div class="btn"><input type="button" name="NO" id="btn">NO</div>
+        <form action="" method="post">
+            <input class="btn" type="button" name="YES" id="btn" value=YES>
+            <input class="btn" type="button" name="NO" id="btn" value="NO">
+        </form>
     </div>
 
     <?php
-    // INSERT query using prepared statement (example)
-    $pstmt = mysqli_prepare($conn, "INSERT INTO booked (reg_id, bike_id, pickup_date, pickup_time, dropoff_date, dropoff_time,price) VALUES (?, ?, ?, ?, ?, ? ,?)");
-    mysqli_stmt_bind_param($pstmt, "ssssss", $regid, $bikeid, $pdate, $ptime, $ddate, $dtime, $totalAmt);
-    mysqli_stmt_execute($pstmt); // Execute prepared INSERT
-
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_POST["YES"])) {    // INSERT query using prepared statement (example)
+            $pstmt = mysqli_prepare($conn, "INSERT INTO booked (reg_id, bike_id, pickup_date, pickup_time, dropoff_date, dropoff_time,price) VALUES (?, ?, ?, ?, ?, ? ,?)");
+            mysqli_stmt_bind_param($pstmt, "ssssss", $regid, $bikeid, $pdate, $ptime, $ddate, $dtime, $totalAmt);
+            mysqli_stmt_execute($pstmt); 
+            header("Location: index.php");// Execute prepared INSERT
+        }
+        if (isset($_POST["NO"])) {
+            unset($_SESSION["bikeid"]);
+            header("Location: index.php");
+        }
+    }
     include('Footer.php');
     ?>
 
