@@ -60,16 +60,18 @@ session_start();
                     $status = "disabled"; // Bike is not available
                     $link = ""; // No link for disabled bikes
                     $Book = "Not Available";
+                    $style = "style = 'filter: grayscale(1);'";
                 } else {
                     $status = ""; // Bike is available
                     $link = "href='Booking.php?bikeid={$row["bike_id"]}'";
                     $Book = "Book Now";
+                    $style = "";
                 }
                 echo
                 "<div class='fleet-image' >
-                        <img src='{$row["img_url"]}' alt='{$row["bike_name"]}'>
+                        <img src='{$row["img_url"]}' alt='{$row["bike_name"]}' $style>
                         <div class='description'>{$row["bike_name"]}</div>
-                       <button type='button' class='book-now' $status><a $link>$Book</a></button>
+                       <button type='button' class='book-now' $status $style><a $link>$Book</a></button>
                     </div>
                     ";
             }
@@ -78,7 +80,7 @@ session_start();
     </div>
 </div>
 
-<?php include('Footer.php'); ?>
+
 </body>
 
-</html>
+</html><?php include('Footer.php'); ?>

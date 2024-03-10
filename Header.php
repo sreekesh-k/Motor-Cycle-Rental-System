@@ -20,7 +20,7 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="index.php#fleet">Fleet</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.php#contact">Contact</a></li>
                     <?php
                     if (isset($_SESSION['username'])) {
                         $username = $_SESSION['username'];
