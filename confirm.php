@@ -134,8 +134,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         unset($_SESSION["ddate"]);
         unset($_SESSION["dtime"]);
         unset($_SESSION["tamount"]);
+        sleep(2);
         // Redirect to index.php after successful insert
-        header("Location: index.php");
+        header("Location: userbooking.php");
         exit();
     }
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["cancel"])) {
@@ -145,6 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         unset($_SESSION["ddate"]);
         unset($_SESSION["dtime"]);
         unset($_SESSION["tamount"]);
+        sleep(2);
         // Redirect to index.php
         header("Location: index.php");
         exit();
