@@ -123,22 +123,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $ddate = $_SESSION['ddate'];
         $dtime = $_SESSION['dtime'];
         $totalAmt = $_SESSION['tamount'];
-        // INSERT query using prepared statement
+
+        // Prepare and execute the INSERT query
         $pstmt = mysqli_prepare($conn, "INSERT INTO booked (reg_id, bike_id, pickup_date, pickup_time, dropoff_date, dropoff_time, price) VALUES (?, ?, ?, ?, ?, ?, ?)");
         mysqli_stmt_bind_param($pstmt, "ssssssd", $regid, $bikeid, $pdate, $ptime, $ddate, $dtime, $totalAmt);
         mysqli_stmt_execute($pstmt);
         mysqli_stmt_close($pstmt);
+
+        // Update the is_available column in the bike table
+        $updateStmt = mysqli_prepare($conn, "UPDATE bike SET is_available = 1 WHERE bike_id = ?");
+        mysqli_stmt_bind_param($updateStmt, "s", $bikeid);
+        mysqli_stmt_execute($updateStmt);
+        mysqli_stmt_close($updateStmt);
         unset($_SESSION["bikeid"]);
         unset($_SESSION["pdate"]);
         unset($_SESSION["ptime"]);
         unset($_SESSION["ddate"]);
         unset($_SESSION["dtime"]);
         unset($_SESSION["tamount"]);
+
         sleep(2);
-        // Redirect to index.php after successful insert
+
         header("Location: userbooking.php");
         exit();
     }
+
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["cancel"])) {
         unset($_SESSION["bikeid"]);
         unset($_SESSION["pdate"]);

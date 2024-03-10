@@ -56,11 +56,20 @@ session_start();
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
+                if ($row["is_available"] == 1) {
+                    $status = "disabled"; // Bike is not available
+                    $link = ""; // No link for disabled bikes
+                    $Book = "Not Available";
+                } else {
+                    $status = ""; // Bike is available
+                    $link = "href='Booking.php?bikeid={$row["bike_id"]}'";
+                    $Book = "Book Now";
+                }
                 echo
-                "<div class='fleet-image'>
+                "<div class='fleet-image' >
                         <img src='{$row["img_url"]}' alt='{$row["bike_name"]}'>
                         <div class='description'>{$row["bike_name"]}</div>
-                        <a href='Booking.php?bikeid={$row["bike_id"]}'><div class='book-now'>Book Now</div></a>
+                       <button type='button' class='book-now' $status><a $link>$Book</a></button>
                     </div>
                     ";
             }
