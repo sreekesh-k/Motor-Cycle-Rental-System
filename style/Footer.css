@@ -11,17 +11,89 @@ body {
 }
 
 .footer {
-    background-color: #333;
+    margin-top: auto;
+    background-color: black;
     color: #fff;
     padding: 30px 20px;
     text-align: center;
     width: 100%;
 }
 
+.contact-info {
+    width: 100%;
+}
 .contact-info p {
     margin-bottom: 10px;
 }
 
-.social-icons a {
+.contact {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+}
+.contact-header { 
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+
+.mail {
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+}
+.ph {
+    display: flex;
+    justify-content: center;
     margin-right: 10px;
+    gap: 5px;
+}
+.ma {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    gap: 5px;
+}
+
+.con1 {
+    margin-left: 20px;
+}
+.con2{
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.con3 { 
+    margin-left: 15px;
+}
+.social-icons {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0px;
+}
+.head {
+    padding: 8px;
+}
+.social-icons hr {
+    height: 2px;
+    width: 20%;
+    margin-left: 40%;
+}
+.fb {
+    margin-top: 8px;
+    padding: 4px;
+    gap: 5px;
+}
+.tw {
+    padding: 4px;
+    gap: 5px;
+}
+.insta {
+    padding: 4px;
+    gap: 5px;
 }

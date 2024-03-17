@@ -2,7 +2,13 @@
 include('db_conn.php');
 session_start();
 
-$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+if(isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+}
+else {
+    header('Location: Login.php');
+}
+
 $bike_id = isset($_GET['bikeid']) ? $_GET['bikeid'] : '';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($bike_id)) {

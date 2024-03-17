@@ -25,7 +25,8 @@ if (!empty($username)) {
 </head>
 
 <body>
-    <h1>Hi <?php echo $username; ?> View Your Bookings Here</h1>
+    <div class  = "header"><h1>Hi <?php echo $username; ?> View Your Bookings Here</h1></div>
+    <hr>
     <div class="main">
         <?php
         $sql = "SELECT * FROM bike bi JOIN booked bo ON bi.bike_id = bo.bike_id JOIN register r ON bo.reg_id = r.reg_id WHERE r.reg_id={$regid} ";
@@ -40,11 +41,11 @@ if (!empty($username)) {
                     </div>";
             }
         } else {
-            echo "<h2>You haven't <a href = 'index.php#fleet'>booked</a> any bikes yet</h2>";
+            echo "<h2>You haven't <a href = 'index.php#fleet'>booked</a> any bikes yet.</h2>";
         }
         ?>
     </div>
-
+    <?php include('Footer.php'); ?>
 </body>
 
 </html>

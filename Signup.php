@@ -2,16 +2,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="style/Signup.css">
 	<link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-
 </head>
-
 <body>
 	<div class="wrapper">
 		<form action="" method="POST">
@@ -21,7 +18,7 @@
 				<div class="input-box">
 					<label>Name :</label>
 					<input type="text" name="name" placeholder="Ethan Hunt" required>
-					<i class='bx bx-user'></i>
+					<i class='bx bxs-user'></i>
 				</div>
 			</div>
 
@@ -29,38 +26,37 @@
 				<div class="input-box">
 					<label>UserName :</label>
 					<input type="text" name="username" placeholder="Ethan_9110" required>
-					<i class='bx bxs-user'></i>
+					<i class='bx bx-user'></i>
 				</div>
 				<div class="input-box">
 					<label>Password :</label>
-					<input type="password" name="password" placeholder="Hunt@123!">
-					<i class='bx bx-lock-alt'></i>
+					<input type="password" name="password" placeholder="Hunt@123!" required>
+					<i class='bx bxs-lock-alt'></i>
 				</div>
 			</div>
 
 			<div class="input-box">
 				<label>Email :</label>
 				<input type="email" name="email" required placeholder="EthanHunt46@gamil.com" id="email">
-				<i class='bx bx-envelope'></i>
-			</div>
+				<i class='bx bxs-envelope'></i>
+				</div>
 
 			<div class="input-box">
 				<label>Driving Licence no :</label>
 				<input type="text" name="licence" required placeholder="KL41 12345678910" id="dlno">
-				<i class='bx bx-credit-card' style="color: white;"></i>
+				<i class='bx bxs-id-card'></i>			
 			</div>
 
 			<div class="input-box">
 				<label>Phone Number :</label>
-				<input type="number" name="phone" required required placeholder="9876543210">
-				<i class='bx bx-phone'></i>
+				<input type="number" name="phone" required placeholder="9876543210">
+				<i class='bx bxs-phone'></i>
 			</div>
 
 			<div class="input-box">
 				<label>Address :</label>
 				<input type="text" name="address" required placeholder="123 Main St, City, State, PIN Code">
-				<i class='bx bx-phone'></i>
-			</div>
+				<i class='bx bxs-location-plus'></i>			</div>
 			<button type="submit" name="submit" class="btn">Register</button>
 
 			<div class="login-link">
@@ -101,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 				exit; //no need to run in background.
 			} else {
-				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+				echo "Error: " . $stmt . "<br>" . mysqli_error($conn);
 				$msg = "REGISTRATION FAILED";
 				echo $msg;
 			}

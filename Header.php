@@ -33,6 +33,7 @@
                         echo "
                     <li><a href='Signup.php'>Signup</a></li> 
                     <li><a href='login.php'>Login</a></li>
+                    <li><a href='admin/adminlogin.php'>Admin</a></li>
                     ";
                     }
                     ?>

@@ -12,9 +12,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background : url('images/black_and_white2.jpg') no-repeat;
+	background : url('images/rc8c.jpeg') no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position:  center;
 }
 .wrapper {
 	width: 420px;

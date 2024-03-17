@@ -77,6 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<?php include('Header.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,10 +90,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
-
+<div class = "header"><h1> Confirm Your Bookings</h1></head></div>
 
     <div class="confirm-box">
-        <h2> Confirm Your Bookings</h2>
         <div class="bookdetails">
             <div class="imagebx">
                 <img src="<?php echo $url; ?>" alt="bike">
@@ -102,18 +102,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "<h4>{$username}</h4><hr>";
                 echo "<h4>{$bike_name}</h4><hr>";
                 echo "<h4>Valid Till : {$_SESSION['ddate']}</h4><hr>";
+                echo "<h4>Per Hour Cost: ".$perhrcost. " Rs </hr><hr>";
                 echo "<h4>Total Booking Duration: " . $totalHours . " hours </h4><hr>";
                 echo "<h4>Total Amount: " . $totalAmt . " Rs </h4><hr>"; ?>
             </div>
 
         </div>
-
-        <form action="" method="post">
+    </div>
+    <form action="" method="post">
+        <div class = "btn-box">
             <input class="btn" type="submit" name="confirm" value="CONFIRM">
             <input class="btn2" type="submit" name="cancel" value="CANCEL">
+        </div>
         </form>
-
-    </div>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["confirm"])) {
@@ -160,10 +161,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: index.php");
         exit();
     }
-
-
     ?>
 
+<?php include('Footer.php'); ?>
 </body>
 
 </html>

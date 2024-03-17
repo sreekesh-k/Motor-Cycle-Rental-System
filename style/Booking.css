@@ -7,6 +7,7 @@
 /* Basic styling */
 body {
     font-family: Arial, sans-serif;
+    background-size: cover;
 }
 
 .bike {
@@ -77,6 +78,7 @@ body {
     display:flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .book-container {
@@ -89,8 +91,11 @@ body {
     background: transparent;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid  black;
+    border: 5px solid  #ff6600;
     border-radius: 25px;
+    box-shadow: 10px 10px 10px black;
+    background-color: grey;
+
 }
 
 form {
@@ -113,11 +118,11 @@ form {
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid black;
     border-radius: 10px;
     font-size: 16px;
     padding: 10px 15px ;
-    border: 2px solid grey;
+    background-color: #fff;
 }
 
 .input::placeholder {
