@@ -22,8 +22,8 @@
 	</div>
 
 	<div align="center" class="mt-5 abc" style="padding-top: 50px;">
-	
-		<a href="delete.php"><button class="btn btn-lg btn-primary">DELETE BOOKINGS</button></a><br><br>
+
+		<a href="bookingdetail.php"><button class="btn btn-lg btn-primary">DELETE BOOKINGS</button></a><br><br>
 		<a href="userdb.php"><button class="btn btn-lg btn-primary">USER DETAIL</button></a>
 	</div>
 
